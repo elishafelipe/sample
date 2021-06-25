@@ -30,7 +30,10 @@ class GoogleController extends Controller
     {
         try {
       
-            $user = Socialite::driver('google')->user();
+            $user = Socialite::driver('google')->stateless()->user();
+            // $user = Socialite::driver($provider)->stateless()->user();
+
+            // Socialite::driver('google')->stateless()->redirect() 
        
             $finduser = User::where('google_id', $user->id)->first();
        
