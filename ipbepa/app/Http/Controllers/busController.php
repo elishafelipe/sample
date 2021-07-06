@@ -104,8 +104,9 @@ class busController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(bus $bus)
     {
-        //
+        $bus->delete();
+        return redirect('/buses')->with('delete', 'Information Deleted!');
     }
 }

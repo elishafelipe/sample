@@ -108,7 +108,7 @@
                                             <td class="center"> {{ $bus->total_seats }}</td>
                                             <td class="center">{{ $bus->is_fullybooked }}</td>
                                             <td>    
-                                            <form action="#" method="POST">
+                                            <form action="{{route('buses.destroy', $bus->busId)}}" method="POST">
                                                 @method('DELETE')
                                                 @csrf   
                                                 <a href="#" class="btn btn-outline-info py-0">
