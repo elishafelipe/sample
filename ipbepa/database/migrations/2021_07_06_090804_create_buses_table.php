@@ -14,11 +14,10 @@ class CreateBusesTable extends Migration
     public function up()
     {
         Schema::create('buses', function (Blueprint $table) {
-            $table->bigIncrements('busId');
+            $table->bigIncrements('id');
             $table->string('bus_route');
             $table->string('bus_platenumber');
             $table->integer('total_seats');
-            $table->string('bus_status');
             $table->boolean('is_fullybooked')->default(0);
             $table->timestamps();
         });

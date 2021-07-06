@@ -20,3 +20,8 @@
             {{ session()->get('msg') }}
         </div>
 @endif
+@if(session()->has('delete'))
+    <div class="alert alert-danger">
+    {{ session()->get('delete') }}
+    </div>
+@endif
