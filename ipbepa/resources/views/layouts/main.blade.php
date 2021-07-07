@@ -19,7 +19,7 @@
     <!-- Google Fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="assets/js/Lightweight-Chart/cssCharts.css"> 
-    <script src="https://kit.fontawesome.com/cd014fdd9f.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
@@ -86,6 +86,7 @@
     <!-- Chart Js -->
     <script type="{{asset('admin/text/javascript" src="assets/js/Chart.min.js')}}"></script>  
     <script type="{{asset('admin/text/javascript" src="assets/js/chartjs.js')}}"></script> 
+    <script src="https://kit.fontawesome.com/cd014fdd9f.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
