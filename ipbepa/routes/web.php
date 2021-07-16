@@ -21,8 +21,7 @@ use App\Http\Controllers\userController;
 
 Route::view('/','welcome');
 
-Route::resource('/buses', busController::class);
-Route::resource('/users', userController::class);
+
 
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
@@ -31,4 +30,10 @@ Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallba
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['web', 'auth'])->group(function () 
+    {
+        Route::resource('/buses', busController::class);
+        Route::resource('/users', userController::class);
+    });
 
